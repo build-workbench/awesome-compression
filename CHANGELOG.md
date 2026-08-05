@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- English documentation site (landing page, guide, algorithm notes, and C++ examples)
+- Real BSC compression example using libbsc block sorting
+
+### Fixed
+
+- English sidebar now lists all available C++ example pages
+- Stale "BSC placeholder" wording in the Chinese overview updated to reflect the real example
+- Repository links in docs and changelog updated to the canonical AICL-Lab organization
+- BSC example now compiles: upstream libbsc target was missing its header include directory
+
 ## [1.0.0] - 2026-05-22
 
 ### Added
@@ -53,6 +65,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic compression examples for ZSTD, LZMA, LZ4, zlib, Brotli
 - BSC placeholder example
 
-[Unreleased]: https://github.com/LessUp/awesome-compression/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/LessUp/awesome-compression/compare/v0.1.0...v1.0.0
-[0.1.0]: https://github.com/LessUp/awesome-compression/releases/tag/v0.1.0
+[Unreleased]: https://github.com/AICL-Lab/awesome-compression/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/AICL-Lab/awesome-compression/compare/v0.1.0...v1.0.0
+[0.1.0]: https://github.com/AICL-Lab/awesome-compression/releases/tag/v0.1.0

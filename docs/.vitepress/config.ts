@@ -109,7 +109,13 @@ export default defineConfig({
             {
               text: 'C++ Examples',
               items: [
-                { text: 'Overview', link: '/en/examples/cpp-overview' }
+                { text: 'Overview', link: '/en/examples/cpp-overview' },
+                { text: 'ZSTD Example', link: '/en/examples/zstd' },
+                { text: 'LZMA Example', link: '/en/examples/lzma' },
+                { text: 'BSC Example', link: '/en/examples/bsc' },
+                { text: 'LZ4 Example', link: '/en/examples/lz4' },
+                { text: 'zlib Example', link: '/en/examples/zlib' },
+                { text: 'Brotli Example', link: '/en/examples/brotli' }
               ]
             }
           ]
@@ -121,7 +127,7 @@ export default defineConfig({
     outline: [2, 3],
     search: { provider: 'local' },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/LessUp/awesome-compression' }
+      { icon: 'github', link: 'https://github.com/AICL-Lab/awesome-compression' }
     ]
   }
 })

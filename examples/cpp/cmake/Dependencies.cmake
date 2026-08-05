@@ -52,4 +52,7 @@ if(AWESOME_COMPRESSION_ENABLE_BSC)
     GIT_TAG master
   )
   FetchContent_MakeAvailable(libbsc)
+  # Upstream libbsc never exposes its header include directory, so consumers
+  # linking bsc::libbsc cannot resolve #include <libbsc.h>. Add it here.
+  target_include_directories(libbsc PUBLIC ${libbsc_SOURCE_DIR}/libbsc)
 endif()
