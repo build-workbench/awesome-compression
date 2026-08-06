@@ -9,15 +9,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- English documentation site (landing page, guide, algorithm notes, and C++ examples)
+- MIT License file
 - Real BSC compression example using libbsc block sorting
+- CI now builds and tests the BSC example (`-DAWESOME_COMPRESSION_ENABLE_BSC=ON`)
+- ccache caching in CI for faster incremental builds
+- `CMAKE_EXPORT_COMPILE_COMMANDS` enabled for editor/LSP integration
+- Uniform error handling across all C++ examples via a shared `run` helper
+
+### Changed
+
+- C++ examples now exit with a friendly stderr message and code 1 on failure instead of `std::terminate`
+- `read_file` accepts `std::string_view`; `print_stats` accepts `std::string_view`
+- Pinned libbsc to a fixed commit (`5e5c2ef`, bsc 3.3.12) instead of the floating `master` tag for reproducible builds
+- Lowered `cmake_minimum_required` from 3.24 to 3.16 for broader toolchain support
+- Simplified `.gitignore` (consolidated build-directory patterns)
+- Documentation site is now Chinese-only; the incomplete English locale was removed
 
 ### Fixed
 
-- English sidebar now lists all available C++ example pages
 - Stale "BSC placeholder" wording in the Chinese overview updated to reflect the real example
 - Repository links in docs and changelog updated to the canonical AICL-Lab organization
 - BSC example now compiles: upstream libbsc target was missing its header include directory
+- BSC example now guards against inputs larger than `INT_MAX` (consistent with LZ4)
+- LZMA example uses `std::numeric_limits` instead of the C `UINT64_MAX` macro
+- ZSTD example uses `ZSTD_CLEVEL_DEFAULT` instead of a hardcoded level
+- Brotli example checks `BrotliEncoderMaxCompressedSize` for failure (returns 0)
+- `read_file` validates the number of bytes actually read via `gcount()`
 
 ## [1.0.0] - 2026-05-22
 

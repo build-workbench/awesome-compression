@@ -44,3 +44,7 @@ ctest --test-dir examples/cpp/build --output-on-failure
 ```
 
 The examples use CMake FetchContent to fetch supported libraries. BSC is optional and may be disabled automatically when the upstream build is unavailable on the current platform.
+
+## License
+
+Released under the [MIT License](./LICENSE).
