@@ -1,7 +1,5 @@
 include(FetchContent)
 
-set(FETCHCONTENT_QUIET FALSE)
-
 set(ZSTD_BUILD_PROGRAMS OFF CACHE BOOL "" FORCE)
 set(ZSTD_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(ZSTD_BUILD_SHARED OFF CACHE BOOL "" FORCE)
@@ -49,7 +47,7 @@ if(AWESOME_COMPRESSION_ENABLE_BSC)
   FetchContent_Declare(
     libbsc
     GIT_REPOSITORY https://github.com/IlyaGrebnov/libbsc.git
-    GIT_TAG master
+    GIT_TAG 5e5c2ef0fb1298626936b091f6e4ae539e5b0071 # bsc 3.3.12
   )
   FetchContent_MakeAvailable(libbsc)
   # Upstream libbsc never exposes its header include directory, so consumers

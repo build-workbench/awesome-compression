@@ -5,9 +5,8 @@ docs/.vitepress/dist/
 
 # CMake / C++
 build/
+build-*/
 cmake-build-*/
-examples/cpp/build/
-examples/cpp/build-*/
 CMakeFiles/
 CMakeCache.txt
 compile_commands.json
@@ -19,9 +18,6 @@ compile_commands.json
 *.dylib
 *.dll
 *.exe
-
-# BSC build directory
-examples/cpp/build-bsc/
 
 # Test logs
 *.log

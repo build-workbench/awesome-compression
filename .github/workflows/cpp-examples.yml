@@ -12,10 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build liblzma-dev
+        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build ccache liblzma-dev
+      - name: Configure ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: ccache-${{ runner.os }}-${{ github.sha }}
+          restore-keys: ccache-${{ runner.os }}-
       - name: Configure
-        run: cmake -S examples/cpp -B examples/cpp/build -G Ninja -DCMAKE_BUILD_TYPE=Release
+        run: |
+          cmake -S examples/cpp -B examples/cpp/build -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
+            -DCMAKE_C_COMPILER_LAUNCHER=ccache \
+            -DAWESOME_COMPRESSION_ENABLE_BSC=ON
       - name: Build
         run: cmake --build examples/cpp/build
       - name: Test
         run: ctest --test-dir examples/cpp/build --output-on-failure
+      - name: Ccache stats
+        run: ccache --show-stats
