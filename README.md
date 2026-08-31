@@ -28,8 +28,8 @@
 
 ### C / C++
 
-- [Zstandard (zstd)](https://github.com/facebook/zstd) - 工业级无损压缩算法（RFC 8878），压缩率与速度覆盖 1-22 级宽光谱调节，附命令行工具，Linux 内核、MySQL、RocksDB 等默认选择.
-- [LZ4](https://github.com/lz4/lz4) - 以极致解压速度著称的块压缩算法，广泛用于实时场景（Redis、RocksDB 等）.
+- [Zstandard (zstd)](https://github.com/facebook/zstd) - 工业级无损压缩算法（RFC 8878），压缩率与速度覆盖 1-22 级宽光谱调节，附命令行工具，被 Linux 内核、MySQL、RocksDB 等广泛集成.
+- [LZ4](https://github.com/lz4/lz4) - 以极致解压速度著称的块压缩算法，广泛用于实时场景（Kafka、ClickHouse、RocksDB 等）.
 - [zlib](https://github.com/madler/zlib) - DEFLATE 的事实标准实现，gzip/zlib 格式的基础.
 - [zlib-ng](https://github.com/zlib-ng/zlib-ng) - 采用 SIMD 指令的现代化分支，大幅提升性能.
 - [zlib (Cloudflare fork)](https://github.com/cloudflare/zlib) - Cloudflare 维护的 zlib 优化分支，针对 Web 场景优化.
@@ -55,7 +55,7 @@
 - [flate2](https://github.com/rust-lang/flate2-rs) - DEFLATE/gzip/zlib 的实现与绑定，Cargo 生态默认选择.
 - [lz4_flex](https://github.com/PSeitz/lz4_flex) - 纯 Rust 的 LZ4 实现，含帧格式支持.
 - [snap](https://github.com/BurntSushi/rust-snappy) - 纯 Rust 的 Snappy 实现，含流式帧格式.
-- [zlib-rs](https://github.com/memorysafety/zlib-rs) - 内存安全倡议用 Rust 重写的 zlib，性能与 C 版相当.
+- [zlib-rs](https://github.com/memorysafety/zlib-rs) - ISRG 的 Prossimo 项目发起、用 Rust 重写的 zlib，性能与 zlib-ng 相当.
 - [rust-brotli](https://github.com/dropbox/rust-brotli) - Brotli 的纯 Rust 实现（Dropbox 维护）.
 - [lzma-rs](https://github.com/gendx/lzma-rs) - 纯 Rust 的 LZMA/LZMA2 解码实现.
 - [miniz_oxide](https://github.com/Frommi/miniz_oxide) - 纯 Rust 的 DEFLATE 实现，flate2 的默认后端.
@@ -80,7 +80,7 @@
 
 ### JavaScript / Web
 
-- [fflate](https://github.com/101arrowz/fflate) - 快速、小体积的浏览器/Node 压缩库（gzip/deflate/zstd）.
+- [fflate](https://github.com/101arrowz/fflate) - 快速、小体积的浏览器/Node 压缩库（gzip/deflate/zlib，支持 ZIP）.
 - [pako](https://github.com/nodeca/pako) - 为 zlib 提供 JavaScript 移植，最经典的浏览器方案.
 - [brotli.js](https://github.com/devongovett/brotli.js) - 纯 JS 的 Brotli 实现.
 
@@ -125,7 +125,7 @@
 
 ## 基准测试
 
-- [lzbench](https://github.com/inikep/lzbench) - 内存内压缩器基准测试框架，收录 50+ 压缩器.
+- [lzbench](https://github.com/inikep/lzbench) - 内存内压缩器基准测试框架，收录 40+ 个开源压缩器.
 - [Squash](https://github.com/quixdb/squash) - 压缩抽象层与统一基准.
 - [TurboBench](https://github.com/powturbo/TurboBench) - 编码器与压缩器评测框架.
 - [Large Text Compression Benchmark](https://mattmahoney.net/dc/text.html) - Matt Mahoney 维护的大文本压缩基准.
