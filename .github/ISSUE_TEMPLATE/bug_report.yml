@@ -1,0 +1,27 @@
+name: Bug report
+description: 报告失效链接、错误描述或文档问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: 相关链接
+      description: 失效或出错的链接（如有）
+      placeholder: "https://github.com/..."
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 具体是什么问题？
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: 发现日期
+      placeholder: "2026-08-31"
+    validations:
+      required: false

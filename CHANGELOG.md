@@ -9,7 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- MIT License file
+- README 转型为面向中文社区的精选列表（awesome list）：收录 70+ 条经过链接验证的压缩库、工具与学习资源
+- 新增 `CONTRIBUTING.md`（中文贡献指南）、`.editorconfig`、`.gitattributes`
+- 新增 issue 模板（bug report / feature request）与 PR 模板
+- 新增 `awesome-lint` CI 工作流，自动检查列表格式与链接有效性
 - Real BSC compression example using libbsc block sorting
 - CI now builds and tests the BSC example (`-DAWESOME_COMPRESSION_ENABLE_BSC=ON`)
 - ccache caching in CI for faster incremental builds
@@ -18,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- README 由英文项目介绍改为中文精选列表，含目录、分类（算法库/学习资源/工具/基准/格式规范/中文资源等）与配套内容指引
+- 许可证由 MIT 切换为 CC0-1.0（与 awesome 社区惯例一致）
+- 文档站 GitHub 链接从 AICL-Lab 更新为当前仓库地址
 - C++ examples now exit with a friendly stderr message and code 1 on failure instead of `std::terminate`
 - `read_file` accepts `std::string_view`; `print_stats` accepts `std::string_view`
 - Pinned libbsc to a fixed commit (`5e5c2ef`, bsc 3.3.12) instead of the floating `master` tag for reproducible builds
@@ -27,8 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- 修正 BSC 仓库链接为 `IlyaGrebnov/libbsc`（原路径已失效）
 - Stale "BSC placeholder" wording in the Chinese overview updated to reflect the real example
-- Repository links in docs and changelog updated to the canonical AICL-Lab organization
 - BSC example now compiles: upstream libbsc target was missing its header include directory
 - BSC example now guards against inputs larger than `INT_MAX` (consistent with LZ4)
 - LZMA example uses `std::numeric_limits` instead of the C `UINT64_MAX` macro
@@ -82,6 +88,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic compression examples for ZSTD, LZMA, LZ4, zlib, Brotli
 - BSC placeholder example
 
-[Unreleased]: https://github.com/AICL-Lab/awesome-compression/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/AICL-Lab/awesome-compression/compare/v0.1.0...v1.0.0
-[0.1.0]: https://github.com/AICL-Lab/awesome-compression/releases/tag/v0.1.0
+[Unreleased]: https://github.com/build-workbench/awesome-compression/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/build-workbench/awesome-compression/compare/v0.1.0...v1.0.0
+[0.1.0]: https://github.com/build-workbench/awesome-compression/releases/tag/v0.1.0
