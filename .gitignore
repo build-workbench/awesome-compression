@@ -26,3 +26,10 @@ compile_commands.json
 .DS_Store
 .idea/
 .vscode/
+
+# AI tools (local only)
+.commandcode/
+.claude/
+.codex/
+.agents/
+.superpowers/
