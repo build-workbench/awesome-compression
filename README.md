@@ -144,8 +144,8 @@
 
 ## 本仓库配套内容
 
-- [文档站（docs/）](https://github.com/build-workbench/awesome-compression/blob/master/docs/zh/index.md) - VitePress 中文文档：压缩基础、算法笔记、选型对比.
-- [C++ 示例（examples/cpp/）](https://github.com/build-workbench/awesome-compression/blob/master/examples/cpp/README.md) - 可运行的 C++17 示例：zstd/LZMA/BSC/LZ4/zlib/Brotli 的压缩-解压-校验闭环.
+- [文档站（docs/）](https://github.com/build-workbench/awesome-compression/blob/main/docs/zh/index.md) - VitePress 中文文档：压缩基础、算法笔记、选型对比.
+- [C++ 示例（examples/cpp/）](https://github.com/build-workbench/awesome-compression/blob/main/examples/cpp/README.md) - 可运行的 C++17 示例：zstd/LZMA/BSC/LZ4/zlib/Brotli 的压缩-解压-校验闭环.
 
 ## 相关精选列表
 
