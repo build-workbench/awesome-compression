@@ -51,6 +51,7 @@
 
 ### Rust
 
+- [fastalp](https://github.com/webc-site/wedb_embed/tree/main/fastalp) - 纯 Rust 实现的自适应无损浮点压缩（ALP）算法库，单核解压吞吐 55~77 GB/s，压缩 6.5 GB/s，平均压缩比 2.29x 且防负压缩膨胀.
 - [zstd-rs](https://github.com/gyscos/zstd-rs) - 为 zstd 提供 Rust 绑定.
 - [flate2](https://github.com/rust-lang/flate2-rs) - DEFLATE/gzip/zlib 的实现与绑定，Cargo 生态默认选择.
 - [lz4_flex](https://github.com/PSeitz/lz4_flex) - 纯 Rust 的 LZ4 实现，含帧格式支持.
