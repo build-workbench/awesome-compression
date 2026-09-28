@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+_(暂无)_
+
+## [v1.1.0] - 2026-09-28
 ### Added
 
 - README 转型为面向中文社区的精选列表（awesome list）：收录 70+ 条经过链接验证的压缩库、工具与学习资源
