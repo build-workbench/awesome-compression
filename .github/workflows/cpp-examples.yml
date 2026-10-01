@@ -3,8 +3,20 @@ name: C++ Examples
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - 'CHANGELOG.md'
   pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
+      - 'CHANGELOG.md'
   workflow_dispatch:
+
+concurrency:
+  group: cpp-examples-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -17,7 +29,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.ccache
-          key: ccache-${{ runner.os }}-${{ github.sha }}
+          key: ccache-${{ runner.os }}-${{ hashFiles('examples/cpp/CMakeLists.txt', 'examples/cpp/**') }}
           restore-keys: ccache-${{ runner.os }}-
       - name: Configure
         run: |
